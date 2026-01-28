@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZYECHS STORE - Jasa Suntik Sosmed Terpercaya</title>
+    
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --bg-dark: #0a0a0a;
+            --bg-card: #161616;
+            --bg-input: #202020;
+            --primary: #00ff88; /* Neon Green */
+            --primary-hover: #00cc6a;
+            --secondary: #00e5ff; /* Neon Blue */
+            --text-main: #ffffff;
+            --text-muted: #a0a0a0;
+            --border: #333;
+            --shadow: 0 4px 20px rgba(0, 255, 136, 0.15);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* Utility Classes */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .text-neon {
+            color: var(--primary);
+            text-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            color: #000;
+            box-shadow: 0 0 15px rgba(0, 255, 136, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 25px rgba(0, 255, 136, 0.6);
+        }
+
+        .btn-outline {
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            background: transparent;
+        }
+
+        .btn-outline:hover {
+            background: var(--primary);
+            color: #000;
+        }
+
+        /* Navbar */
+        header {
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid var(--border);
+            padding: 15px 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-main);
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: var(--primary);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .hamburger {
+            display: none;
+            color: var(--text-main);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 160px 0 100px;
+            text-align: center;
+            background: radial-gradient(circle at center, rgba(0, 255, 136, 0.05) 0%, rgba(10, 10, 10, 0) 70%);
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Calculator Section (The Core) */
+        .calculator-section {
+            padding: 60px 0;
+            position: relative;
+        }
+
+        .calc-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .calc-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2rem;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .form-group.full-width {
+            grid-column: span 2;
+        }
+
+        label {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        select, input {
+            background: var(--bg-input);
+            border: 1px solid var(--border);
+            color: var(--text-main);
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.3s;
+            width: 100%;
+        }
+
+        select:focus, input:focus {
+            border-color: var(--primary);
+        }
+
+        .price-display {
+            background: rgba(0, 255, 136, 0.05);
+            border: 1px solid var(--primary);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .price-label {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .price-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin: 5px 0;
+        }
+
+        .price-note {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        /* Services Grid */
+        .services-section {
+            padding: 80px 0;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .service-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            transition: transform 0.3s, border-color 0.3s;
+            cursor: default;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+        }
+
+        .service-icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            background: -webkit-linear-gradient(var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .service-name {
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        /* How To & FAQ */
+        .info-section {
+            padding: 80px 0;
+            background: #0f0f0f;
+        }
+
+        .steps {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .step-card {
+            background: var(--bg-card);
+            padding: 30px;
+            border-radius: 15px;
+            width: 300px;
+            text-align: center;
+            border-top: 3px solid var(--secondary);
+        }
+
+        .step-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: rgba(255, 255, 255, 0.05);
+            margin-bottom: -20px;
+            position: relative;
+            z-index: 0;
+        }
+
+        .step-title {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .faq-item {
+            background: var(--bg-card);
+            margin-bottom: 15px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+        }
+
+        .faq-answer {
+            padding: 0 20px 20px;
+            color: var(--text-muted);
+            display: none;
+            font-size: 0.95rem;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question {
+            color: var(--primary);
+        }
+
+        /* Footer */
+        footer {
+            background: #000;
+            padding: 50px 0 20px;
+            border-top: 1px solid var(--border);
+            text-align: center;
+        }
+
+        .footer-info p {
+            color: var(--text-muted);
+            margin-bottom: 10px;
+        }
+
+        .payment-methods {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+
+        .pay-badge {
+            background: #222;
+            padding: 5px 15px;
+            border-radius: 5px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            border: 1px solid #333;
+        }
+
+        .copy {
+            font-size: 0.8rem;
+            color: #555;
+            margin-top: 30px;
+        }
+
+        /* Notification Toast */
+        .toast {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: var(--bg-card);
+            border-left: 4px solid var(--primary);
+            padding: 15px 25px;
+            border-radius: 5px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+            transform: translateY(100px);
+            opacity: 0;
+            transition: all 0.3s ease;
+            z-index: 2000;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .toast.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background: var(--bg-card);
+                flex-direction: column;
+                padding: 20px;
+                text-align: center;
+                border-bottom: 1px solid var(--border);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .form-group.full-width {
+                grid-column: span 1;
+            }
+
+            .calc-card {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">ZYECHS <span class="text-neon">STORE</span></div>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#kalkulator">Order</a></li>
+                    <li><a href="#layanan">Layanan</a></li>
+                    <li><a href="#cara-order">Cara Order</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="https://wa.me/6288294562035" class="text-neon"><i class="fab fa-whatsapp"></i> Chat</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Home / Hero -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h4 class="text-neon">Fast & Trusted ✅</h4>
+            <h1>SOLUSI SMM PANEL <br><span class="text-neon">TERBAIK & TERMURAH</span></h1>
+            <p>Tingkatkan kredibilitas sosial media Anda dengan layanan suntik followers, likes, views tercepat dan harga termurah se-Indonesia.</p>
+            <a href="#kalkulator" class="btn btn-primary"><i class="fas fa-calculator"></i> Mulai Hitung Harga</a>
+            <a href="#layanan" class="btn btn-outline" style="margin-left: 10px;">Lihat Layanan</a>
+        </div>
+    </section>
+
+    <!-- Calculator & Order Form -->
+    <section id="kalkulator" class="calculator-section">
+        <div class="container">
+            <div class="calc-card">
+                <h2 class="section-title"><span class="text-neon">Kalkulator</span> Harga Otomatis</h2>
+                
+                <form id="orderForm">
+                    <div class="form-grid">
+                        <!-- Platform -->
+                        <div class="form-group">
+                            <label>1. Pilih Platform</label>
+                            <select id="platformSelect" onchange="updateServices()">
+                                <option value="" disabled selected>-- Pilih Platform --</option>
+                                <!-- Options populated by JS -->
+                            </select>
+                        </div>
+
+                        <!-- Service -->
+                        <div class="form-group">
+                            <label>2. Pilih Layanan</label>
+                            <select id="serviceSelect" onchange="updateQualities()" disabled>
+                                <option value="" disabled selected>-- Pilih Layanan --</option>
+                            </select>
+                        </div>
+
+                        <!-- Quality -->
+                        <div class="form-group">
+                            <label>3. Pilih Kualitas</label>
+                            <select id="qualitySelect" onchange="calculatePrice()" disabled>
+                                <option value="" disabled selected>-- Pilih Kualitas --</option>
+                            </select>
+                        </div>
+
+                        <!-- Quantity -->
+                        <div class="form-group">
+                            <label>4. Jumlah (Min. 10-100)</label>
+                            <input type="number" id="qtyInput" placeholder="Masukkan jumlah..." oninput="calculatePrice()" disabled min="10">
+                        </div>
+                    </div>
+
+                    <!-- Real-time Price Display -->
+                    <div class="price-display">
+                        <div class="price-label">Harga per 1000: <span id="pricePer1000Display" class="text-neon">Rp0</span></div>
+                        <div class="price-value" id="totalPriceDisplay">Rp0</div>
+                        <div class="price-note">*Estimasi harga akhir</div>
+                    </div>
+
+                    <div style="margin-top: 30px;">
+                        <label style="margin-bottom: 5px; display:block;">Username / Link Target (Opsional di kalkulator, wajib di WA)</label>
+                        <input type="text" id="targetInput" placeholder="https://instagram.com/username Anda...">
+                    </div>
+
+                    <div style="margin-top: 30px;">
+                        <button type="button" class="btn btn-primary" style="width: 100%; font-size: 1.1rem;" onclick="sendToWhatsapp()">
+                            <i class="fab fa-whatsapp"></i> ORDER VIA WHATSAPP
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section id="layanan" class="services-section">
+        <div class="container">
+            <h2 class="section-title text-center">Layanan <span class="text-neon">Kami</span></h2>
+            <p class="text-center text-muted">Layanan lengkap untuk berbagai platform sosial media dan marketplace</p>
+            
+            <div class="services-grid">
+                <!-- Icons for visual representation -->
+                <div class="service-card"><i class="fab fa-instagram service-icon"></i><div class="service-name">Instagram</div></div>
+                <div class="service-card"><i class="fab fa-tiktok service-icon"></i><div class="service-name">TikTok</div></div>
+                <div class="service-card"><i class="fab fa-youtube service-icon"></i><div class="service-name">YouTube</div></div>
+                <div class="service-card"><i class="fab fa-facebook service-icon"></i><div class="service-name">Facebook</div></div>
+                <div class="service-card"><i class="fab fa-twitter service-icon"></i><div class="service-name">Twitter / X</div></div>
+                <div class="service-card"><i class="fab fa-threads service-icon"></i><div class="service-name">Threads</div></div>
+                <div class="service-card"><i class="fab fa-whatsapp service-icon"></i><div class="service-name">WA Channel</div></div>
+                <div class="service-card"><i class="fab fa-telegram service-icon"></i><div class="service-name">Telegram</div></div>
+                <div class="service-card"><i class="fab fa-pinterest service-icon"></i><div class="service-name">Pinterest</div></div>
+                <div class="service-card"><i class="fab fa-spotify service-icon"></i><div class="service-name">Spotify</div></div>
+                <div class="service-card"><i class="fas fa-shopping-bag service-icon"></i><div class="service-name">Shopee</div></div>
+                <div class="service-card"><i class="fas fa-store service-icon"></i><div class="service-name">Tokopedia</div></div>
+                <div class="service-card"><i class="fas fa-shopping-cart service-icon"></i><div class="service-name">Lazada</div></div>
+                <div class="service-card"><i class="fas fa-book-open service-icon"></i><div class="service-name">Bukalapak</div></div>
+                <div class="service-card"><i class="fas fa-gamepad service-icon"></i><div class="service-name">Roblox</div></div>
+                <div class="service-card"><i class="fab fa-discord service-icon"></i><div class="service-name">Discord</div></div>
+                <div class="service-card"><i class="fab fa-twitch service-icon"></i><div class="service-name">Twitch</div></div>
+                <div class="service-card"><i class="fab fa-google service-icon"></i><div class="service-name">Maps Review</div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How To Order & FAQ -->
+    <section id="cara-order" class="info-section">
+        <div class="container">
+            <h2 class="section-title text-center">Cara <span class="text-neon">Order</span></h2>
+            
+            <div class="steps">
+                <div class="step-card">
+                    <div class="step-number">01</div>
+                    <h3 class="step-title">Pilih Layanan</h3>
+                    <p class="text-muted">Gunakan kalkulator di atas untuk memilih platform, layanan, dan kualitas yang diinginkan.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">02</div>
+                    <h3 class="step-title">Hitung Harga</h3>
+                    <p class="text-muted">Masukkan jumlah yang Anda butuhkan. Harga akan muncul otomatis secara real-time.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">03</div>
+                    <h3 class="step-title">Kirim Order</h3>
+                    <p class="text-muted">Klik tombol "Order Via WhatsApp", pesanan akan terformat otomatis. Lanjutkan pembayaran.</p>
+                </div>
+            </div>
+
+            <div id="faq" style="margin-top: 80px; max-width: 800px; margin-left: auto; margin-right: auto;">
+                <h2 class="section-title text-center">Pertanyaan <span class="text-neon">Umum</span></h2>
+                
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        Berapa lama proses pengerjaannya?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Untuk layanan Bot/Fast biasanya instan hingga 1 jam. Untuk Real User/HQ biasanya 1-24 jam tergantung antrian.
+                    </div>
+                </div>
+
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        Apakah ada garansi?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Ya, kami memberikan garansi pengisian ulang (refill) jika followers/likes drop dalam masa garansi sesuai layanan yang dipilih.
+                    </div>
+                </div>
+
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        Metode pembayaran apa saja?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Kami menerima pembayaran melalui Transfer Bank BNI, GoPay, dan QRIS (All Payment).
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="logo" style="margin-bottom: 20px;">ZYECHS <span class="text-neon">STORE</span></div>
+            
+            <div class="payment-methods">
+                <div class="pay-badge">BNI</div>
+                <div class="pay-badge">GoPay</div>
+                <div class="pay-badge">QRIS ALL PAYMENT</div>
+            </div>
+
+            <div class="footer-info">
+                <p>WhatsApp Order: 0882-9456-2035</p>
+                <p>Email: support@zyechs.store</p>
+            </div>
+
+            <p class="copy">&copy; 2023 ZYECHS STORE. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">
+        <i class="fas fa-info-circle text-neon"></i>
+        <span id="toastMessage">Pesan notifikasi</span>
+    </div>
+
+    <!-- JavaScript Logic -->
+    <script>
+        // Database Harga (Simulasi)
+        // Struktur: Platform -> Service -> Quality -> Price per 1000
+        const priceData = {
+            "Instagram": {
+                "Followers": {
+                    "High Quality": 25000,
+                    "Real User": 35000,
+                    "Bot / Fast": 15000
+                },
+                "Likes": {
+                    "High Quality": 10000,
+                    "Real User": 15000,
+                    "Bot / Fast": 3000
+                },
+                "Views": {
+                    "High Quality": 5000,
+                    "Real User": 8000,
+                    "Bot / Fast": 1000
+                }
+            },
+            "TikTok": {
+                "Followers": {
+                    "High Quality": 30000,
+                    "Real User": 40000,
+                    "Bot / Fast": 20000
+                },
+                "Likes": {
+                    "High Quality": 15000,
+                    "Real User": 20000,
+                    "Bot / Fast": 5000
+                },
+                "Views": {
+                    "High Quality": 2000,
+                    "Real User": 3000,
+                    "Bot / Fast": 500
+                }
+            },
+            "YouTube": {
+                "Subscriber": {
+                    "High Quality": 150000,
+                    "Real User": 250000,
+                    "Bot / Fast": 100000
+                },
+                "Views": {
+                    "High Quality": 50000,
+                    "Real User": 80000,
+                    "Bot / Fast": 20000
+                }
+            },
+            "Facebook": {
+                "Followers": {
+                    "High Quality": 40000,
+                    "Real User": 60000,
+                    "Bot / Fast": 25000
+                },
+                "Likes": {
+                    "High Quality": 20000,
+                    "Real User": 30000,
+                    "Bot / Fast": 10000
+                },
+                "Views": {
+                    "High Quality": 10000,
+                    "Real User": 15000,
+                    "Bot / Fast": 5000
+                }
+            },
+            "Twitter/X": {
+                "Followers": {
+                    "High Quality": 50000,
+                    "Real User": 75000,
+                    "Bot / Fast": 30000
+                },
+                "Likes": {
+                    "High Quality": 25000,
+                    "Real User": 35000,
+                    "Bot / Fast": 10000
+                }
+            },
+            "Threads": {
+                "Followers": {
+                    "High Quality": 30000,
+                    "Real User": 45000,
+                    "Bot / Fast": 20000
+                }
+            },
+            "WhatsApp Channel Member": {
+                "Member": {
+                    "High Quality": 100000,
+                    "Real User": 150000,
+                    "Bot / Fast": 75000
+                }
+            },
+            "Telegram": {
+                "Member": {
+                    "High Quality": 80000,
+                    "Real User": 120000,
+                    "Bot / Fast": 50000
+                }
+            },
+            "Spotify": {
+                "Plays": {
+                    "High Quality": 5000,
+                    "Real User": 8000,
+                    "Bot / Fast": 2000
+                },
+                "Followers": {
+                    "High Quality": 100000,
+                    "Real User": 150000,
+                    "Bot / Fast": 75000
+                }
+            },
+            "Shopee": {
+                "Chat Review": {
+                    "High Quality": 30000,
+                    "Real User": 40000,
+                    "Bot / Fast": 20000
+                }
+            },
+            "Tokopedia": {
+                "Review Produk": {
+                    "High Quality": 25000,
+                    "Real User": 35000,
+                    "Bot / Fast": 15000
+                }
+            },
+            "Lazada": {
+                "Review Produk": {
+                    "High Quality": 25000,
+                    "Real User": 35000,
+                    "Bot / Fast": 15000
+                }
+            },
+            "Bukalapak": {
+                "Review Produk": {
+                    "High Quality": 25000,
+                    "Real User": 35000,
+                    "Bot / Fast": 15000
+                }
+            },
+            "Roblox Followers": {
+                "Followers": {
+                    "High Quality": 40000,
+                    "Real User": 60000,
+                    "Bot / Fast": 25000
+                }
+            },
+            "Discord Members": {
+                "Member": {
+                    "High Quality": 120000,
+                    "Real User": 150000,
+                    "Bot / Fast": 90000
+                }
+            },
+            "Twitch": {
+                "Followers": {
+                    "High Quality": 180000,
+                    "Real User": 250000,
+                    "Bot / Fast": 100000
+                }
+            },
+            "Google Maps Review": {
+                "Review 5 Bintang": {
+                    "High Quality": 50000,
+                    "Real User": 75000,
+                    "Bot / Fast": 30000
+                }
+            },
+            "Pinterest": {
+                "Followers": {
+                    "High Quality": 35000,
+                    "Real User": 50000,
+                    "Bot / Fast": 20000
+                }
+            }
+        };
+
+        // DOM Elements
+        const platformSelect = document.getElementById('platformSelect');
+        const serviceSelect = document.getElementById('serviceSelect');
+        const qualitySelect = document.getElementById('qualitySelect');
+        const qtyInput = document.getElementById('qtyInput');
+        const pricePer1000Display = document.getElementById('pricePer1000Display');
+        const totalPriceDisplay = document.getElementById('totalPriceDisplay');
+        const targetInput = document.getElementById('targetInput');
+        const navLinks = document.getElementById('navLinks');
+        const hamburger = document.getElementById('hamburger');
+
+        // Initialize Dropdowns
+        function init() {
+            // Populate Platform
+            for (let platform in priceData) {
+                let option = document.createElement('option');
+                option.value = platform;
+                option.text = platform;
+                platformSelect.add(option);
+            }
+        }
+
+        // Update Services based on Platform
+        window.updateServices = function() {
+            const selectedPlatform = platformSelect.value;
+            serviceSelect.innerHTML = '<option value="" disabled selected>-- Pilih Layanan --</option>';
+            qualitySelect.innerHTML = '<option value="" disabled selected>-- Pilih Kualitas --</option>';
+            qualitySelect.disabled = true;
+            qtyInput.disabled = true;
+            resetPrice();
+
+            if (selectedPlatform && priceData[selectedPlatform]) {
+                serviceSelect.disabled = false;
+                for (let service in priceData[selectedPlatform]) {
+                    let option = document.createElement('option');
+                    option.value = service;
+                    option.text = service;
+                    serviceSelect.add(option);
+                }
+            }
+        };
+
+        // Update Qualities based on Service
+        window.updateQualities = function() {
+            const selectedPlatform = platformSelect.value;
+            const selectedService = serviceSelect.value;
+            qualitySelect.innerHTML = '<option value="" disabled selected>-- Pilih Kualitas --</option>';
+            qtyInput.disabled = true;
+            resetPrice();
+
+            if (selectedPlatform && selectedService && priceData[selectedPlatform][selectedService]) {
+                qualitySelect.disabled = false;
+                for (let quality in priceData[selectedPlatform][selectedService]) {
+                    let option = document.createElement('option');
+                    option.value = quality;
+                    option.text = quality;
+                    qualitySelect.add(option);
+                }
+            }
+        };
+
+        // Calculate Price
+        window.calculatePrice = function() {
+            const platform = platformSelect.value;
+            const service = serviceSelect.value;
+            const quality = qualitySelect.value;
+            const qty = parseInt(qtyInput.value);
+
+            if (platform && service && quality) {
+                qtyInput.disabled = false;
+                const pricePer1000 = priceData[platform][service][quality];
+                pricePer1000Display.innerText = formatRupiah(pricePer1000);
+
+                if (qty && qty > 0) {
+                    // Logic: (Price / 1000) * Qty
+                    const total = (pricePer1000 / 1000) * qty;
+                    totalPriceDisplay.innerText = formatRupiah(total);
+                } else {
+                    totalPriceDisplay.innerText = "Rp0";
+                }
+            }
+        };
+
+        function resetPrice() {
+            pricePer1000Display.innerText = "Rp0";
+            totalPriceDisplay.innerText = "Rp0";
+        }
+
+        // Format Currency
+        function formatRupiah(number) {
+            return new Intl.NumberFormat("id-ID", {
+                style: "currency",
+                currency: "IDR",
+                minimumFractionDigits: 0
+            }).format(number);
+        }
+
+        // Send to WhatsApp
+        window.sendToWhatsapp = function() {
+            const platform = platformSelect.value;
+            const service = serviceSelect.value;
+            const quality = qualitySelect.value;
+            const qty = qtyInput.value;
+            const target = targetInput.value;
+            const pricePer1000 = pricePer1000Display.innerText;
+            const total = totalPriceDisplay.innerText;
+
+            if (!platform || !service || !quality || !qty) {
+                showToast("Mohon lengkapi semua pilihan dan jumlah!");
+                return;
+            }
+
+            if (qty < 10) {
+                showToast("Minimal pemesanan 10.");
+                return;
+            }
+
+            const phoneNumber = "6288294562035";
+            
+            const message = `Halo ZYECHS STORE 👋%0A%0ASaya ingin order:%0A%0A` +
+                            `Platform: ${platform}%0A` +
+                            `Layanan: ${service}%0A` +
+                            `Kualitas: ${quality}%0A` +
+                            `Jumlah: ${qty}%0A` +
+                            `Harga per 1000: ${pricePer1000}%0A` +
+                            `Total Harga: ${total}%0A%0A` +
+                            `Username / Link: ${target ? target : '(Akan dikirimkan setelah)'}`;
+
+            const url = `https://wa.me/${phoneNumber}?text=${message}`;
+            window.open(url, '_blank');
+        };
+
+        // UI Interactions
+        function toggleFaq(element) {
+            element.classList.toggle('active');
+        }
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Toast Function
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            const toastMsg = document.getElementById('toastMessage');
+            toastMsg.innerText = message;
+            toast.classList.add('show');
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 3000);
+        }
+
+        // Run Init
+        init();
+
+    </script>
+</body>
+</html>
