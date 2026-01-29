@@ -1,33 +1,30 @@
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ZYECHS STORE - Jasa Suntik Sosmed Terpercaya</title>
-
+    
     <!-- Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" type="image/png" href="Foto/f1.png">
+    <link rel="Icons" type="image/png" href="f1.png">
     <style>
-         :root {
+        :root {
             --bg-dark: #0a0a0a;
             --bg-card: #161616;
             --bg-input: #202020;
-            --primary: #00ff88;
-            /* Neon Green */
+            --primary: #00ff88; /* Neon Green */
             --primary-hover: #00cc6a;
-            --secondary: #00e5ff;
-            /* Neon Blue */
+            --secondary: #00e5ff; /* Neon Blue */
             --text-main: #ffffff;
             --text-muted: #a0a0a0;
             --border: #333;
             --shadow: 0 4px 20px rgba(0, 255, 136, 0.15);
         }
-        
+
         * {
             margin: 0;
             padding: 0;
@@ -35,26 +32,26 @@
             font-family: 'Poppins', sans-serif;
             scroll-behavior: smooth;
         }
-        
+
         body {
             background-color: var(--bg-dark);
             color: var(--text-main);
             overflow-x: hidden;
             line-height: 1.6;
         }
+
         /* Utility Classes */
-        
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
-        
+
         .text-neon {
             color: var(--primary);
             text-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
         }
-        
+
         .btn {
             display: inline-block;
             padding: 12px 30px;
@@ -66,30 +63,30 @@
             cursor: pointer;
             text-align: center;
         }
-        
+
         .btn-primary {
             background: linear-gradient(45deg, var(--primary), var(--secondary));
             color: #000;
             box-shadow: 0 0 15px rgba(0, 255, 136, 0.4);
         }
-        
+
         .btn-primary:hover {
             transform: translateY(-2px);
             box-shadow: 0 0 25px rgba(0, 255, 136, 0.6);
         }
-        
+
         .btn-outline {
             border: 2px solid var(--primary);
             color: var(--primary);
             background: transparent;
         }
-        
+
         .btn-outline:hover {
             background: var(--primary);
             color: #000;
         }
+
         /* Navbar */
-        
         header {
             background: rgba(10, 10, 10, 0.95);
             backdrop-filter: blur(10px);
@@ -100,61 +97,61 @@
             border-bottom: 1px solid var(--border);
             padding: 15px 0;
         }
-        
+
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-        
+
         .logo {
             font-size: 1.5rem;
             font-weight: 700;
             color: var(--text-main);
             letter-spacing: 1px;
         }
-        
+
         .logo span {
             color: var(--primary);
         }
-        
+
         .nav-links {
             display: flex;
             gap: 25px;
             list-style: none;
         }
-        
+
         .nav-links a {
             color: var(--text-muted);
             text-decoration: none;
             font-weight: 500;
             transition: color 0.3s;
         }
-        
+
         .nav-links a:hover {
             color: var(--primary);
         }
-        
+
         .hamburger {
             display: none;
             color: var(--text-main);
             font-size: 1.5rem;
             cursor: pointer;
         }
+
         /* Hero Section */
-        
         .hero {
             padding: 160px 0 100px;
             text-align: center;
             background: radial-gradient(circle at center, rgba(0, 255, 136, 0.05) 0%, rgba(10, 10, 10, 0) 70%);
         }
-        
+
         .hero h1 {
             font-size: 3rem;
             margin-bottom: 20px;
             line-height: 1.2;
         }
-        
+
         .hero p {
             color: var(--text-muted);
             font-size: 1.1rem;
@@ -163,25 +160,25 @@
             margin-left: auto;
             margin-right: auto;
         }
+
         /* Calculator Section (The Core) */
-        
         .calculator-section {
             padding: 60px 0;
             position: relative;
         }
-        
+
         .calc-card {
             background: var(--bg-card);
             border: 1px solid var(--border);
             border-radius: 20px;
             padding: 40px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
             max-width: 800px;
             margin: 0 auto;
             position: relative;
             overflow: hidden;
         }
-        
+
         .calc-card::before {
             content: '';
             position: absolute;
@@ -191,37 +188,36 @@
             height: 4px;
             background: linear-gradient(90deg, var(--primary), var(--secondary));
         }
-        
+
         .section-title {
             text-align: center;
             margin-bottom: 30px;
             font-size: 2rem;
         }
-        
+
         .form-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 20px;
         }
-        
+
         .form-group {
             display: flex;
             flex-direction: column;
             gap: 8px;
         }
-        
+
         .form-group.full-width {
             grid-column: span 2;
         }
-        
+
         label {
             font-size: 0.9rem;
             color: var(--text-muted);
             font-weight: 500;
         }
-        
-        select,
-        input {
+
+        select, input {
             background: var(--bg-input);
             border: 1px solid var(--border);
             color: var(--text-main);
@@ -232,12 +228,11 @@
             transition: border-color 0.3s;
             width: 100%;
         }
-        
-        select:focus,
-        input:focus {
+
+        select:focus, input:focus {
             border-color: var(--primary);
         }
-        
+
         .price-display {
             background: rgba(0, 255, 136, 0.05);
             border: 1px solid var(--primary);
@@ -246,36 +241,36 @@
             text-align: center;
             margin-top: 20px;
         }
-        
+
         .price-label {
             font-size: 0.9rem;
             color: var(--text-muted);
         }
-        
+
         .price-value {
             font-size: 2.5rem;
             font-weight: 700;
             color: var(--primary);
             margin: 5px 0;
         }
-        
+
         .price-note {
             font-size: 0.8rem;
             color: var(--text-muted);
         }
+
         /* Services Grid */
-        
         .services-section {
             padding: 80px 0;
         }
-        
+
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
             gap: 20px;
             margin-top: 40px;
         }
-        
+
         .service-card {
             background: var(--bg-card);
             border: 1px solid var(--border);
@@ -285,12 +280,12 @@
             transition: transform 0.3s, border-color 0.3s;
             cursor: default;
         }
-        
+
         .service-card:hover {
             transform: translateY(-5px);
             border-color: var(--primary);
         }
-        
+
         .service-icon {
             font-size: 2rem;
             margin-bottom: 10px;
@@ -298,18 +293,18 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-        
+
         .service-name {
             font-size: 0.9rem;
             font-weight: 500;
         }
+
         /* How To & FAQ */
-        
         .info-section {
             padding: 80px 0;
             background: #0f0f0f;
         }
-        
+
         .steps {
             display: flex;
             justify-content: center;
@@ -317,7 +312,7 @@
             gap: 30px;
             margin-top: 40px;
         }
-        
+
         .step-card {
             background: var(--bg-card);
             padding: 30px;
@@ -326,7 +321,7 @@
             text-align: center;
             border-top: 3px solid var(--secondary);
         }
-        
+
         .step-number {
             font-size: 3rem;
             font-weight: 700;
@@ -335,21 +330,21 @@
             position: relative;
             z-index: 0;
         }
-        
+
         .step-title {
             font-size: 1.2rem;
             margin-bottom: 10px;
             position: relative;
             z-index: 1;
         }
-        
+
         .faq-item {
             background: var(--bg-card);
             margin-bottom: 15px;
             border-radius: 10px;
             overflow: hidden;
         }
-        
+
         .faq-question {
             padding: 20px;
             cursor: pointer;
@@ -358,35 +353,35 @@
             align-items: center;
             font-weight: 600;
         }
-        
+
         .faq-answer {
             padding: 0 20px 20px;
             color: var(--text-muted);
             display: none;
             font-size: 0.95rem;
         }
-        
+
         .faq-item.active .faq-answer {
             display: block;
         }
-        
+
         .faq-item.active .faq-question {
             color: var(--primary);
         }
+
         /* Footer */
-        
         footer {
             background: #000;
             padding: 50px 0 20px;
             border-top: 1px solid var(--border);
             text-align: center;
         }
-        
+
         .footer-info p {
             color: var(--text-muted);
             margin-bottom: 10px;
         }
-        
+
         .payment-methods {
             display: flex;
             justify-content: center;
@@ -394,7 +389,7 @@
             margin: 20px 0;
             flex-wrap: wrap;
         }
-        
+
         .pay-badge {
             background: #222;
             padding: 5px 15px;
@@ -403,14 +398,14 @@
             font-weight: 600;
             border: 1px solid #333;
         }
-        
+
         .copy {
             font-size: 0.8rem;
             color: #555;
             margin-top: 30px;
         }
+
         /* Notification Toast */
-        
         .toast {
             position: fixed;
             bottom: 20px;
@@ -419,7 +414,7 @@
             border-left: 4px solid var(--primary);
             padding: 15px 25px;
             border-radius: 5px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.5);
             transform: translateY(100px);
             opacity: 0;
             transition: all 0.3s ease;
@@ -428,13 +423,13 @@
             align-items: center;
             gap: 10px;
         }
-        
+
         .toast.show {
             transform: translateY(0);
             opacity: 1;
         }
+
         /* Responsive Design */
-        
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
@@ -448,28 +443,33 @@
                 text-align: center;
                 border-bottom: 1px solid var(--border);
             }
+
             .nav-links.active {
                 display: flex;
             }
+
             .hamburger {
                 display: block;
             }
+
             .hero h1 {
                 font-size: 2rem;
             }
+
             .form-grid {
                 grid-template-columns: 1fr;
             }
+
             .form-group.full-width {
                 grid-column: span 1;
             }
+
             .calc-card {
                 padding: 25px;
             }
         }
     </style>
 </head>
-
 <body>
 
     <!-- Header -->
@@ -508,7 +508,7 @@
         <div class="container">
             <div class="calc-card">
                 <h2 class="section-title"><span class="text-neon">Kalkulator</span> Harga Otomatis</h2>
-
+                
                 <form id="orderForm">
                     <div class="form-grid">
                         <!-- Platform -->
@@ -570,63 +570,27 @@
         <div class="container">
             <h2 class="section-title text-center">Layanan <span class="text-neon">Kami</span></h2>
             <p class="text-center text-muted">Layanan lengkap untuk berbagai platform sosial media dan marketplace</p>
-
+            
             <div class="services-grid">
                 <!-- Icons for visual representation -->
-                <div class="service-card"><i class="fab fa-instagram service-icon"></i>
-                    <div class="service-name">Instagram</div>
-                </div>
-                <div class="service-card"><i class="fab fa-tiktok service-icon"></i>
-                    <div class="service-name">TikTok</div>
-                </div>
-                <div class="service-card"><i class="fab fa-youtube service-icon"></i>
-                    <div class="service-name">YouTube</div>
-                </div>
-                <div class="service-card"><i class="fab fa-facebook service-icon"></i>
-                    <div class="service-name">Facebook</div>
-                </div>
-                <div class="service-card"><i class="fab fa-twitter service-icon"></i>
-                    <div class="service-name">Twitter / X</div>
-                </div>
-                <div class="service-card"><i class="fab fa-threads service-icon"></i>
-                    <div class="service-name">Threads</div>
-                </div>
-                <div class="service-card"><i class="fab fa-whatsapp service-icon"></i>
-                    <div class="service-name">WA Channel</div>
-                </div>
-                <div class="service-card"><i class="fab fa-telegram service-icon"></i>
-                    <div class="service-name">Telegram</div>
-                </div>
-                <div class="service-card"><i class="fab fa-pinterest service-icon"></i>
-                    <div class="service-name">Pinterest</div>
-                </div>
-                <div class="service-card"><i class="fab fa-spotify service-icon"></i>
-                    <div class="service-name">Spotify</div>
-                </div>
-                <div class="service-card"><i class="fas fa-shopping-bag service-icon"></i>
-                    <div class="service-name">Shopee</div>
-                </div>
-                <div class="service-card"><i class="fas fa-store service-icon"></i>
-                    <div class="service-name">Tokopedia</div>
-                </div>
-                <div class="service-card"><i class="fas fa-shopping-cart service-icon"></i>
-                    <div class="service-name">Lazada</div>
-                </div>
-                <div class="service-card"><i class="fas fa-book-open service-icon"></i>
-                    <div class="service-name">Bukalapak</div>
-                </div>
-                <div class="service-card"><i class="fas fa-gamepad service-icon"></i>
-                    <div class="service-name">Roblox</div>
-                </div>
-                <div class="service-card"><i class="fab fa-discord service-icon"></i>
-                    <div class="service-name">Discord</div>
-                </div>
-                <div class="service-card"><i class="fab fa-twitch service-icon"></i>
-                    <div class="service-name">Twitch</div>
-                </div>
-                <div class="service-card"><i class="fab fa-google service-icon"></i>
-                    <div class="service-name">Maps Review</div>
-                </div>
+                <div class="service-card"><i class="fab fa-instagram service-icon"></i><div class="service-name">Instagram</div></div>
+                <div class="service-card"><i class="fab fa-tiktok service-icon"></i><div class="service-name">TikTok</div></div>
+                <div class="service-card"><i class="fab fa-youtube service-icon"></i><div class="service-name">YouTube</div></div>
+                <div class="service-card"><i class="fab fa-facebook service-icon"></i><div class="service-name">Facebook</div></div>
+                <div class="service-card"><i class="fab fa-twitter service-icon"></i><div class="service-name">Twitter / X</div></div>
+                <div class="service-card"><i class="fab fa-threads service-icon"></i><div class="service-name">Threads</div></div>
+                <div class="service-card"><i class="fab fa-whatsapp service-icon"></i><div class="service-name">WA Channel</div></div>
+                <div class="service-card"><i class="fab fa-telegram service-icon"></i><div class="service-name">Telegram</div></div>
+                <div class="service-card"><i class="fab fa-pinterest service-icon"></i><div class="service-name">Pinterest</div></div>
+                <div class="service-card"><i class="fab fa-spotify service-icon"></i><div class="service-name">Spotify</div></div>
+                <div class="service-card"><i class="fas fa-shopping-bag service-icon"></i><div class="service-name">Shopee</div></div>
+                <div class="service-card"><i class="fas fa-store service-icon"></i><div class="service-name">Tokopedia</div></div>
+                <div class="service-card"><i class="fas fa-shopping-cart service-icon"></i><div class="service-name">Lazada</div></div>
+                <div class="service-card"><i class="fas fa-book-open service-icon"></i><div class="service-name">Bukalapak</div></div>
+                <div class="service-card"><i class="fas fa-gamepad service-icon"></i><div class="service-name">Roblox</div></div>
+                <div class="service-card"><i class="fab fa-discord service-icon"></i><div class="service-name">Discord</div></div>
+                <div class="service-card"><i class="fab fa-twitch service-icon"></i><div class="service-name">Twitch</div></div>
+                <div class="service-card"><i class="fab fa-google service-icon"></i><div class="service-name">Maps Review</div></div>
             </div>
         </div>
     </section>
@@ -635,7 +599,7 @@
     <section id="cara-order" class="info-section">
         <div class="container">
             <h2 class="section-title text-center">Cara <span class="text-neon">Order</span></h2>
-
+            
             <div class="steps">
                 <div class="step-card">
                     <div class="step-number">01</div>
@@ -656,7 +620,7 @@
 
             <div id="faq" style="margin-top: 80px; max-width: 800px; margin-left: auto; margin-right: auto;">
                 <h2 class="section-title text-center">Pertanyaan <span class="text-neon">Umum</span></h2>
-
+                
                 <div class="faq-item" onclick="toggleFaq(this)">
                     <div class="faq-question">
                         Berapa lama proses pengerjaannya?
@@ -694,7 +658,7 @@
     <footer>
         <div class="container">
             <div class="logo" style="margin-bottom: 20px;">ZYECHS <span class="text-neon">STORE</span></div>
-
+            
             <div class="payment-methods">
                 <div class="pay-badge">BNI</div>
                 <div class="pay-badge">GoPay</div>
@@ -703,10 +667,10 @@
 
             <div class="footer-info">
                 <p>WhatsApp Order: 0882-9456-2035</p>
-                <p>Email: support@zyechs.store</p>
+                <p>Email: zyechsstore@gmail.com</p>
             </div>
 
-            <p class="copy">&copy; 2023 ZYECHS STORE. All Rights Reserved.</p>
+            <p class="copy">&copy; 2024 ZYECHS STORE. All Rights Reserved.</p>
         </div>
     </footer>
 
@@ -723,31 +687,31 @@
         const priceData = {
             "Instagram": {
                 "Followers": {
-                    "High Quality": 26000,
-                    "Real User": 62500,
+                    "High Quality": 25000,
+                    "Real User": 35000,
                     "Bot / Fast": 15000
                 },
                 "Likes": {
-                    "High Quality": 15000,
-                    "Real User": 32500,
-                    "Bot / Fast": 10000
+                    "High Quality": 10000,
+                    "Real User": 15000,
+                    "Bot / Fast": 3000
                 },
                 "Views": {
-                    "High Quality": 2000,
-                    "Real User": 5000,
+                    "High Quality": 5000,
+                    "Real User": 8000,
                     "Bot / Fast": 1000
                 }
             },
             "TikTok": {
                 "Followers": {
                     "High Quality": 30000,
-                    "Real User": 45000,
-                    "Bot / Fast": 10000
+                    "Real User": 40000,
+                    "Bot / Fast": 20000
                 },
                 "Likes": {
-                    "High Quality": 17000,
+                    "High Quality": 15000,
                     "Real User": 20000,
-                    "Bot / Fast": 1500
+                    "Bot / Fast": 5000
                 },
                 "Views": {
                     "High Quality": 2000,
@@ -757,76 +721,76 @@
             },
             "YouTube": {
                 "Subscriber": {
-                    "High Quality": 240000,
-                    "Real User": 260000,
+                    "High Quality": 150000,
+                    "Real User": 250000,
                     "Bot / Fast": 100000
                 },
                 "Views": {
-                    "High Quality": 25000,
-                    "Real User": 50000,
-                    "Bot / Fast": 15000
+                    "High Quality": 50000,
+                    "Real User": 80000,
+                    "Bot / Fast": 20000
                 }
             },
             "Facebook": {
                 "Followers": {
-                    "High Quality": 6500,
-                    "Real User": 8000,
-                    "Bot / Fast": 5000
+                    "High Quality": 40000,
+                    "Real User": 60000,
+                    "Bot / Fast": 25000
                 },
                 "Likes": {
+                    "High Quality": 20000,
+                    "Real User": 30000,
+                    "Bot / Fast": 10000
+                },
+                "Views": {
                     "High Quality": 10000,
                     "Real User": 15000,
                     "Bot / Fast": 5000
-                },
-                "Views": {
-                    "High Quality": 8000,
-                    "Real User": 12000,
-                    "Bot / Fast": 4000
                 }
             },
             "Twitter/X": {
                 "Followers": {
                     "High Quality": 50000,
-                    "Real User": 100000,
-                    "Bot / Fast": 15000
+                    "Real User": 75000,
+                    "Bot / Fast": 30000
                 },
                 "Likes": {
                     "High Quality": 25000,
-                    "Real User": 90000,
-                    "Bot / Fast": 25000
+                    "Real User": 35000,
+                    "Bot / Fast": 10000
                 }
             },
             "Threads": {
                 "Followers": {
                     "High Quality": 30000,
-                    "Real User": 50000,
+                    "Real User": 45000,
                     "Bot / Fast": 20000
                 }
             },
             "WhatsApp Channel Member": {
                 "Member": {
-                    "High Quality": 30000,
-                    "Real User": 30000,
-                    "Bot / Fast": 30000
+                    "High Quality": 100000,
+                    "Real User": 150000,
+                    "Bot / Fast": 75000
                 }
             },
             "Telegram": {
                 "Member": {
-                    "High Quality": 25000,
-                    "Real User": 45000,
-                    "Bot / Fast": 5000
+                    "High Quality": 80000,
+                    "Real User": 120000,
+                    "Bot / Fast": 50000
                 }
             },
             "Spotify": {
                 "Plays": {
-                    "High Quality": 6000,
+                    "High Quality": 5000,
                     "Real User": 8000,
-                    "Bot / Fast": 4000
+                    "Bot / Fast": 2000
                 },
                 "Followers": {
-                    "High Quality": 15000,
-                    "Real User": 60000,
-                    "Bot / Fast": 6000
+                    "High Quality": 100000,
+                    "Real User": 150000,
+                    "Bot / Fast": 75000
                 }
             },
             "Shopee": {
@@ -859,37 +823,37 @@
             },
             "Roblox Followers": {
                 "Followers": {
-
-                    "Real User": 110000,
-
+                    "High Quality": 40000,
+                    "Real User": 60000,
+                    "Bot / Fast": 25000
                 }
             },
             "Discord Members": {
                 "Member": {
-
-                    "Real User": 70000,
-
+                    "High Quality": 120000,
+                    "Real User": 150000,
+                    "Bot / Fast": 90000
                 }
             },
             "Twitch": {
                 "Followers": {
-                    "High Quality": 6000,
-                    "Real User": 17000,
-                    "Bot / Fast": 5000
+                    "High Quality": 180000,
+                    "Real User": 250000,
+                    "Bot / Fast": 100000
                 }
             },
             "Google Maps Review": {
-                "Review 5 Bintang Custom": {
-
-                    "Real User": 11000000,
-
+                "Review 5 Bintang": {
+                    "High Quality": 50000,
+                    "Real User": 75000,
+                    "Bot / Fast": 30000
                 }
             },
             "Pinterest": {
                 "Followers": {
-
-                    "Real User": 55000,
-
+                    "High Quality": 35000,
+                    "Real User": 50000,
+                    "Bot / Fast": 20000
                 }
             }
         };
@@ -1012,15 +976,15 @@
             }
 
             const phoneNumber = "6288294562035";
-
+            
             const message = `Halo ZYECHS STORE 👋%0A%0ASaya ingin order:%0A%0A` +
-                `Platform: ${platform}%0A` +
-                `Layanan: ${service}%0A` +
-                `Kualitas: ${quality}%0A` +
-                `Jumlah: ${qty}%0A` +
-                `Harga per 1000: ${pricePer1000}%0A` +
-                `Total Harga: ${total}%0A%0A` +
-                `Username / Link: ${target ? target : '(Akan dikirimkan setelah)'}`;
+                            `Platform: ${platform}%0A` +
+                            `Layanan: ${service}%0A` +
+                            `Kualitas: ${quality}%0A` +
+                            `Jumlah: ${qty}%0A` +
+                            `Harga per 1000: ${pricePer1000}%0A` +
+                            `Total Harga: ${total}%0A%0A` +
+                            `Username / Link: ${target ? target : '(Akan dikirimkan setelah)'}`;
 
             const url = `https://wa.me/${phoneNumber}?text=${message}`;
             window.open(url, '_blank');
@@ -1054,7 +1018,7 @@
 
         // Run Init
         init();
+
     </script>
 </body>
-
 </html>
